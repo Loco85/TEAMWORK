@@ -1,0 +1,120 @@
+/*MEDIA QUERIES*/
+@media (max-width: 1200px) {
+  /*HEADER*/
+  .header {
+     &__info {
+         grid-template-columns: 1fr 0.1fr!important;
+     }
+      &__img {
+        img {
+          width: 500px!important;
+        }
+      }
+  } 
+  /*HEADER*/ 
+} 
+@media (max-width: 991px) {
+  .container {
+      grid-template-rows: 1fr 40fr 1fr;
+  } 
+  /*HEADER*/
+  .header {
+    &__nav {
+      &-left {
+        display: grid;
+        align-items: start;
+      }
+      &-hamburger {
+        display: grid;
+      }
+      &-right {
+        display: none;
+      }
+      &-right-inner {
+        position: absolute;
+        top: -70px;
+        left: 0;
+        grid-template-columns: auto;
+        background-color: #fff;
+        box-shadow: 0 1px 20px 4px rgba(9,9,9,0.5);
+        padding: 15px;
+        &>div {
+          text-align: left;
+        }
+      }
+    }
+    &__block {
+      grid-template-rows: 0.1fr 4fr 1.5fr;
+    }
+    &__info {
+       grid-template-columns: repeat(1, auto)!important;
+       grid-template-rows: auto auto;
+    }
+    &__info-left {
+      display: grid;
+      grid-template-columns: repeat(1, auto);
+      grid-template-rows: 80px 150px 90px;
+      justify-content: center;
+    }
+    &__title {
+      justify-self: center;
+    }
+    &__text {
+      justify-self: center;
+    }
+    &__buttons {
+       grid-template-columns: 1fr 1fr;
+       &>div {
+         text-align: center;
+         button {
+           margin-right: 0;
+           margin-bottom: 10px;
+         }
+         &:last-child {
+            button {
+              margin-bottom: 0;
+            }
+         }
+       }
+    }
+    &__img {
+      img {
+        width: 100%!important;
+      }
+    }
+    &__social {
+      align-self: start;
+      grid-template-columns: repeat(4, auto);
+      &>div {
+         display: grid;
+         justify-content: center;
+      }
+    }
+  } 
+  /*HEADER*/ 
+}
+@media (max-width: 576px) {
+  /*HEADER*/
+  .header {
+    background-attachment: fixed;
+    &__info {
+       grid-template-rows: 2fr 2fr;
+    }
+    &__title {
+       h1 {
+          font-size: 2.1rem;
+          text-align: center;
+       }
+    }
+    &__buttons {
+       grid-template-columns: auto;
+       justify-items: center;
+    } 
+    &__social {
+      grid-template-columns: repeat(4, minmax(20px, auto));
+      grid-template-rows: 100px;
+    }
+  } 
+  /*HEADER*/ 
+}
+/*MEDIA QUERIES*/ 
